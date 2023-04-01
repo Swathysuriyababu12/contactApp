@@ -15,7 +15,7 @@ port = process.env.port
  app.use(express.json());
  app.use(cors());
  app.use('/', authRoute)
-// app.use('/' , authMiddleware,  contacts)
+app.use('/' , authMiddleware,  contacts)
 
 
 app.get('/', (req,res)=>{
