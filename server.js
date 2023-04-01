@@ -18,8 +18,8 @@ port = process.env.port
 app.get('/', (req,res)=>{
     res.send('hello world')
 })
- app.use('/', authRoute)
-app.use('/' , authMiddleware,  contacts)
+ app.use('/hello', authRoute)
+app.use('/hello/hello' , authMiddleware,  contacts)
 
 
 
