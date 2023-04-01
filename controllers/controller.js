@@ -1,6 +1,8 @@
 const connectDB = require("../dbConnect")
 const { ObjectId } = require("mongodb");
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+const dotenv =require("dotenv");
+dotenv.config();
 
 
 const getAllContacts = async (req, res) => {
