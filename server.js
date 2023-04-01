@@ -14,13 +14,15 @@ port = process.env.port
 // app.use(express.static('./public'));
  app.use(express.json());
  app.use(cors());
- app.use('/', authRoute)
-app.use('/' , authMiddleware,  contacts)
-
 
 app.get('/', (req,res)=>{
     res.send('hello world')
 })
+ app.use('/', authRoute)
+app.use('/' , authMiddleware,  contacts)
+
+
+
 
 app.use('*', (req, res) => {
     res.status(404).send('Error 404 - Page not found')
